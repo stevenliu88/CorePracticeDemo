@@ -5,6 +5,11 @@ namespace CorePractice.Infrastructure
 {
     public class CoreContext : DbContext
     {
+        private readonly DbContextOptions<CoreContext> _options;
+
+        public CoreContext(DbContextOptions<CoreContext> options) : base(options)
+        {
+        }
         public DbSet<User> Users { get; set; }
 
         public DbSet<Group> Groups { get; set; }

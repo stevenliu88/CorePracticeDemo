@@ -21,7 +21,9 @@ namespace CorePractice.WebApi.Controllers
             _userService = userService;
         }
 
+
         [HttpGet]
+
         public async Task<User> GetUser(int userId)
         {
             return await _userService.GetUserByIdAsync(userId);
