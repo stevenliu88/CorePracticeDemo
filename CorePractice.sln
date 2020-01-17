@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorePractice.Application", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorePractice.Infrastructure", "CorePractice.Infrastructure\CorePractice.Infrastructure.csproj", "{738E2242-86CD-49AB-AD87-E42549CD1AFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorePractice.WebApi", "CorePractice.WebApi\CorePractice.WebApi.csproj", "{3FB0F9AD-3378-4FCB-BF08-5387828B4DB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{738E2242-86CD-49AB-AD87-E42549CD1AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{738E2242-86CD-49AB-AD87-E42549CD1AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{738E2242-86CD-49AB-AD87-E42549CD1AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB0F9AD-3378-4FCB-BF08-5387828B4DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB0F9AD-3378-4FCB-BF08-5387828B4DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB0F9AD-3378-4FCB-BF08-5387828B4DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB0F9AD-3378-4FCB-BF08-5387828B4DB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{201AAFD6-698D-46B4-9E3F-D0D0B435D810} = {70EE69FD-050D-404C-9301-43C1192589CA}
 		{738E2242-86CD-49AB-AD87-E42549CD1AFA} = {70EE69FD-050D-404C-9301-43C1192589CA}
+		{3FB0F9AD-3378-4FCB-BF08-5387828B4DB3} = {70EE69FD-050D-404C-9301-43C1192589CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F0CD106-9A44-4C27-9FCB-46832DF2B908}
