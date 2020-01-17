@@ -7,6 +7,9 @@ namespace CorePractice.Infrastructure
     {
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Group> Groups { get; set; }
+
+
         private const string connectionString = @"server=coresample.database.windows.net; database=coresample;user id=coredev;password='s+_v_#anXLZHzzpzAgT'";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -62,6 +65,23 @@ namespace CorePractice.Infrastructure
                 entity.Property(user => user.Mobile).HasMaxLength(50);
             });
 
-    }
+            // Create group properties
+
+            builder.Entity<Group>(entity =>
+            {
+                entity.HasKey(group => group.GroupId);
+            });
+
+            builder.Entity<Group>(entity =>
+            {
+                entity.Property(group => group.GroupName).HasMaxLength(50).IsRequired();
+            });
+
+            builder.Entity<Group>(entity =>
+            {
+                entity.Property(group => group.Description).HasMaxLength(256);
+            });
+
+        }
     }
 }
