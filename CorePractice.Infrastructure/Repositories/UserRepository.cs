@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CorePractice.Infrastructure.Repositories
 {
-    class UserRepository: IUserRepository
+    public class UserRepository: IUserRepository
     {
         private readonly CoreContext _coreContext;
         public UserRepository(CoreContext coreContext) 

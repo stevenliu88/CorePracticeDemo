@@ -10,11 +10,11 @@ namespace CorePractice.Application.Services
     public interface IUserService
     {
         Task<User> GetUserByIdAsync(int id);
-        Task InsertUserAsync(User user);
+        Task<User> InsertUserAsync(User user);
         Task UpdateUserAsync(User user);
-        Task DeleteUserByIdAsync(int id);
+        Task<int> DeleteUserByIdAsync(int id);
     }
-    class UserService : IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 
@@ -27,17 +27,20 @@ namespace CorePractice.Application.Services
         {
             return await _userRepository.GetUserByIdAsync(id);
         }
-        public async Task InsertUserAsync(User user) 
+        public async Task<User> InsertUserAsync(User user) 
         {
             await _userRepository.InsertUserAsync(user);
+            return user;
         }
         public async Task UpdateUserAsync(User user) 
         {
-            await _userRepository.UpdateUserAsync(user);
+            //await _userRepository.UpdateUserAsync(user);
+            throw new NotImplementedException();
         }
-        public async Task DeleteUserByIdAsync(int userId) 
+        public async Task<int> DeleteUserByIdAsync(int userId) 
         {
             await _userRepository.DeleteUserByIdAsync(userId);
+            return userId;
         }
     }
 }
