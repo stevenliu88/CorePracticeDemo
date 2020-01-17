@@ -21,6 +21,47 @@ namespace CorePractice.Infrastructure
             {
                 entity.HasKey(user => user.UserId);
             });
-        }
+
+            builder.Entity<User>(entity =>
+            {
+                entity.Property(user => user.Username).HasMaxLength(50).IsRequired();
+            });
+
+            builder.Entity<User>(entity =>
+            {
+                entity.Property(user => user.Password).HasMaxLength(128).IsRequired();
+            });
+
+            builder.Entity<User>(entity =>
+            {
+                entity.Property(user => user.Firstname).HasMaxLength(100).IsRequired();
+            });
+
+            builder.Entity<User>(entity =>
+            {
+                entity.Property(user => user.Lastname).HasMaxLength(100).IsRequired();
+            });
+
+            builder.Entity<User>(entity =>
+            {
+                entity.Property(user => user.DateOfBirth);
+            });
+
+            builder.Entity<User>(entity =>
+            {
+                entity.Property(user => user.Email).HasMaxLength(256).IsRequired();
+            });
+
+            builder.Entity<User>(entity =>
+            {
+                entity.Property(user => user.Phone).HasMaxLength(50);
+            });
+
+            builder.Entity<User>(entity =>
+            {
+                entity.Property(user => user.Mobile).HasMaxLength(50);
+            });
+
+    }
     }
 }
